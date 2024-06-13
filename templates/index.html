@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафедра</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="icon" href="#">
+</head>
+<body>
+    <!-- навигацая -->
+    <div class=nav>
+        <img class="logo" src="/static/png/dstu_logo.png" alt="dstu logo">
+        <div class="navphrase">
+            <p>кафедра "дизайн" дгту</p>
+            <svg width="540" height="4" viewBox="0 0 540 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 2L540 2.00005" stroke="white" stroke-width="2.5"/>
+            </svg>
+            <p class="p2">школа архитектуры, дизайна и искусств</p>
+        </div>
+        <a href='#about'>о кафедре</a>
+        <a href='#exam'>как поступить</a>
+        <a href='#awards'>достижения</a>
+        <a href='#prog'>программа</a>
+        <a href='#forma' class="aform"><img src="/static/png/a_form.png" alt="форма="></a>
+    </div>
+
+<!-- страница 1 главная -->
+<div id="about" class="block1">
+<span class="anchor" id="about"></span>
+        <!-- логотип и формы -->
+        <img class="kafdislogo" src="/static/png/logo_kafdis.png" alt="logo">
+        <img class="bigshape1" src="/static/png/big_shape.png" alt="bigshape1">
+        <img class="ultrasmallshape1" src="/static/png/ultrasmallshape1.png" alt="ultrasmallshape1">
+    <!-- два блока с текстом -->
+    <div class="smallblock1">
+        <!-- левый -->
+        <div class="smlblckLEFT">
+        <img class="smallshape1" src="/static/png/small_shape1.png" alt="smallshape1">
+        <h2>КОММУНИКАТИВНЫЙ<br/>ДИЗАЙН</h2>
+        <p>Визуальный брендинг и айдентика, дизайн <br/>
+            полиграфической и сувенирной продукции.<br/>
+            Веб-проектирование, иллюстрация, плакат<br/>
+            и фотографика</p>
+        </div>
+        <!-- правый -->
+        <div class="smlblckRIGHT">
+        <img class="smallshape2" src="/static/png/small_shape2.png" alt="smallshape2">
+        <h2>ДИЗАЙН<br/>СРЕДЫ</h2>
+        <p>Дизайн средовых объектов и систем,<br/>
+            экспереминтальное проектирование.<br/>
+            Дизайн малых архитектурных форм,<br/>
+            жилых помещений и общественных <br/>
+            объектов</p>
+        </div>
+    </div>
+</div>
+<!-- страница 2 галерея бак маг -->
+<div class="block2">
+    <div class="gallerychoice">
+        <input type="radio" id="bak1" value="/template/bak2block.html" name="choice1" data-target="contentblock1" checked>
+        <label for="bak1">БАКАЛАВРИАТ</label>
+
+        <input type="radio" id="mag1" value="/template/mag2block.html" name="choice1" data-target="contentblock1">
+        <label for="mag1">МАГИСТРАТУРА</label>
+    </div>
+        <div class = "gallery" id="contentblock1">
+        </div>
+</div>
+<!-- страница 3 преподаватели -->
+<div class ="block3">
+    <h3>ПРЕПОДАВАТЕЛИ</h3>
+    <div class="teachergallery">
+        <div class="teacher">
+            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher1.png') }}" alt="Teacher">
+            <h1>Бердник Татьяна</br>
+                Олеговна</h1>
+            <p>заведующая кафедрой,</br>
+                кандидат филосовских наук,</br>
+                профессор
+            </p>
+        </div>
+        <div class="teacher">
+            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher2.png') }}" alt="Teacher">
+            <h1>Наумова Екатерина</br>
+                Григорьевна</h1>
+            <p>доцент,</br>
+                кандидат филосовских наук
+            </p>
+        </div>
+        <div class="teacher">
+            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher3.png') }}" alt="Teacher">
+            <h1>Клименко Ирина</br>
+                Ахсаровна</h1>
+                <p>доцент,</br>
+                    кандидат филосовских наук
+                </p>
+        </div>
+        <div class="teacher">
+            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher4.png') }}" alt="Teacher">
+            <h1>Куприянова Елена</br>
+                Владимировна</h1>
+            <p>доцент</p> 
+        </div>
+        <div class="teacher">
+            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher5.png') }}" alt="Teacher">
+            <h1>Кожина Наталия</br>
+                Васильевна</h1>
+            <p>доцент</p>
+        </div>
+        <div class="teacher">
+            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher6.png') }}" alt="Teacher">
+            <h1>Травин Александр</br>
+                Владимирович</h1>
+            <p>доцент</p>
+        </div>
+        <div class="teacher">
+            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher7.png') }}" alt="Teacher">
+            <h1>Травин Константин</br>
+                Владимирович</h1>
+            <p>доцент</p>
+        </div>
+    </div>
+</div>
+<!-- страница 4 как поступить -->
+<div id="exam" class = "block4">
+<span class="anchor" id="exam"></span>
+    <h3>КАК ПОСТУПИТЬ</h3>
+    <div class="contacts">
+        <p>Приёмная комиссия:8 (900) 100-19-30</p>
+        <p>Дни открытых дверей</p>
+        <p>Официальный сайт ДГТУ</p>
+    </div>
+    <div class="gallerychoice">
+        <input type="radio" id="bak2" value="/template/bak4block.html" name="choice2" data-target="contentblock4" checked>
+        <label for="bak2">БАКАЛАВРИАТ</label>
+
+        <input type="radio" id="mag2" value="/template/mag4block.html" name="choice2" data-target="contentblock4">
+        <label for="mag2">МАГИСТРАТУРА</label>
+    </div>
+        <div class = "howto" id="contentblock4">
+        </div>
+</div>
+<!-- страница 5 достижения -->
+<div id="awards" class="block5">
+    <h3>ДОСТИЖЕНИЯ</h3>
+    <div class="gallerychoice">
+        <input type="radio" id="prep" value="/template/prepod5block.html" name="choice3" data-target="contentblock5" checked>
+        <label for="prep">ПРЕПОДАВАТЕЛИ</label>
+
+        <input type="radio" id="stud" value="/template/stud5block.html" name="choice3" data-target="contentblock5">
+        <label for="stud">СТУДЕНТЫ</label>
+    </div>
+        <div class = "howto" id="contentblock5">
+        </div>
+</div>
+<!-- страница 6 активность -->
+<div class="block6">
+    <h3>АКТИВНОСТЬ</h3>
+    <p>Студенты принимают активное участие в организации </br>
+        выставочно-конкурсных мероприятий кафедры "Дизайн",</br>
+        занимают призовые места на международных конкурсах</br>
+        и фестивалях дизайна, архитектуры и искусств.</br>
+        В рамках научной работы студенты принимают</br>
+        участие в конференциях и круглых столах.</p>
+    <div class="activityblock">
+        <img class="galleryImage" src="{{ url_for('static', filename='png/activity/activity1.png') }}" alt="GalleryImage">
+        <img class="galleryImage" src="{{ url_for('static', filename='png/activity/activity2.png') }}" alt="GalleryImage">
+        <img class="galleryImage" src="{{ url_for('static', filename='png/activity/activity3.png') }}" alt="GalleryImage">
+        <img class="galleryImage" src="{{ url_for('static', filename='png/activity/activity4.png') }}" alt="GalleryImage">
+    </div>
+</div>
+<!-- страница 7 партнёры -->
+<div class="block7">
+    <h3>ПАРТНЁРЫ</h3>
+    <div class="partners">
+        <div class="partncont">
+        <img class="partnersimg" src="{{ url_for('static', filename='png/partners/partners1.png') }}" alt="Partners">
+        <img class="partnersimg" src="{{ url_for('static', filename='png/partners/partners2.png') }}" alt="Partners">
+        <img class="partnersimg" src="{{ url_for('static', filename='png/partners/partners3.png') }}" alt="Partners">
+        <img class="partnersimg" src="{{ url_for('static', filename='png/partners/partners4.png') }}" alt="Partners">
+        </div>
+    </div>
+</div>
+<!-- страница 8 программа -->
+<div id="prog" class="block8 ">
+    <h3>ПРОГРАММА</h3>
+    <div class="gallerychoice">
+        <input type="radio" id="comdis" value="/template/comdis8block.html" name="choice4" data-target="contentblock8" checked>
+        <label class="block8label" for="comdis">КОММУНИКАТИВНЫЙ ДИЗАЙН</label>
+
+        <input type="radio" id="dissred" value="/template/dissred8block.html" name="choice4" data-target="contentblock8">
+        <label class="block8label" for="dissred">ДИЗАЙН СРЕДЫ</label>
+    </div>
+        <div class = "howto" id="contentblock8">
+        </div>
+</div>
+
+
+<div class="footer">
+    <div class="xx2">
+        <img class="kafdislogo" src="/static/png/logo_kafdis.png" alt="logo">
+        <div class="links">
+            <input type="text" name="name" placeholder="Имя">
+            <input type="email" name="email" placeholder="email">
+            <input type="tel" name="phone" placeholder="Телефон">
+            <p>если остались вопросы </p>
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>

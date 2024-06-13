@@ -1,0 +1,530 @@
+@font-face {
+    font-family: "menoegrotesquepro";
+    src: url("/static/fonts/MenoeGrotesquePro.otf");
+}
+
+html {
+    background-color: white;
+    font-family: "menoegrotesquepro";
+    margin: 0;
+    scroll-behavior: smooth;
+}
+.anchor {
+    display: block;
+    position: relative;
+    top: -100px; /* Поднимите якорь на 100px выше */
+    visibility: hidden;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+h3{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 250%;
+    letter-spacing: 7px;
+    margin-top: 0px;
+    margin-left: 15%;
+}
+
+h3::before, h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: black;
+}
+
+h3::before {
+    top: -7px;
+}
+
+h3::after {
+    bottom: -7px;
+}
+
+/*НАВИГАЦИЯ*/
+.nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    text-decoration: none;
+    text-align: center;
+    padding-bottom: 10px;
+    background-color: black;
+    z-index: 99;
+    /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);  <--тень */
+}   
+/*АНКЛИК В НАВИГАЦИИ*/
+
+/*ДГТУ ЛОГО*/
+.logo{
+    width: 55px;
+    height: 61px;
+    transform: translate(0, 3px);
+    margin-right: 30px;
+    user-select: none;
+}
+
+.navphrase {
+    display: inline-block;
+}
+.navphrase p {
+    color: white;
+    margin: 6px;
+    font-size: 14px;
+}
+.navphrase .p2 {
+    margin: 10px;
+    font-size: 14px;
+}
+/*СВ-ВА ССЫЛОК В НАВИГАЦИИ*/
+.nav a {
+    display: inline-block;
+    margin-left: 2%;
+    text-decoration: none;
+    color:white;
+    transform: translate(0, -26.5px);
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 3px;
+    transition: 0.2s linear;
+    font-size: 15px;
+}
+/*ФОРМА= ССЫЛКА СМЕЩЕНИЕ ИЗОБ*/
+.nav .aform{
+    transform: translate(0, 8px);
+    user-select: none;
+}
+/*ФОРМА= ОТМЕНА НАВЕДЕНИЯ*/
+.nav .aform:hover{
+    background-color: black;
+    color: none;
+}
+/*НАВЕДЕНИЕ НА ССЫЛКУ*/
+.nav a:hover{
+    background-color: white;
+    color: black;
+}   
+
+/* страница 1 главная */
+.block1{
+    background-color: black;
+    color: white;
+    margin:0;
+    padding: 0;
+    padding-bottom: 3%; 
+}
+    /*KAFDIS LOGO*/
+    .kafdislogo {
+        margin-top: 8%;
+        margin-left:18%;
+        width: 30%;
+        height: 30%;
+    }
+    /*BIG SHAPE SPIRAL 1*/
+    .bigshape1{
+        margin-top: 8%;
+        height: 369.38px;
+        width: 712.54px;
+        right: 0;
+        position: absolute;
+    }
+
+    .ultrasmallshape1{
+        margin-top: 10%;
+        margin-right: 5%;
+        overflow: hidden;
+        float: right;
+        transform: translate(0,400px);
+    }
+
+    /* grid small block */
+    .smallblock1{
+        margin-top: 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 15%;
+
+    }
+    .smallblock1 h2 {
+        font-weight: normal;
+        font-size: 250%;
+    }
+
+    .smallshape1{
+        position: absolute;
+        transform: translate(350%, 35%);
+        width: 112px;
+        height: 128px;
+    }
+
+    .smallshape2{
+        position: absolute;
+        transform: translate(450%, 40%);
+        width: 87.2px;
+        height: 126.4px;
+    }
+
+/* страница 2 галерея бак маг */
+.block2{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    margin-top: 7%;
+    margin-bottom: 5%;
+}  
+    .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin-top: 4%;
+        margin-left: 15%;
+        font-weight:lighter;
+    }
+    .gallery img {
+        height: 400px;
+        width: auto;
+    }
+
+    .gallerychoice {
+	    display: flex;
+        font-size:xx-large;
+    }
+    .gallerychoice label {
+        display: inline-block;
+        position: relative;
+        color: #CBCBCB;
+        padding-bottom: 0px;
+        cursor: pointer;
+        margin-top: 0;
+        /* margin-bottom: 2%; */
+        margin-left: 15%;
+    }
+    /* наведение на label */
+    .gallerychoice label:hover {
+    color: black;
+    }
+    .gallerychoice input[type=radio]:checked + label {
+        color: black;
+    }
+    /* отображение флажков */
+    .gallerychoice input[type=radio]{
+    display: none;
+    }
+    /* появление подчёркивания */
+    label::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.2s, left 0.2s;
+    transform: translateX(-50%);
+    /* margin-top: -2px; */
+    }
+
+    input[type="radio"]:checked + label::after {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    /* мгновенное исчезновение подчёркивания */
+    input[type="radio"]:not(:checked) + label::after {
+    transition: none;
+    }
+
+
+/* страница 3 преподаватели */
+.block3{
+    background-color: white;
+    color: black;
+    margin:0;
+    margin-top: 4%;
+    padding: 0;
+    padding-bottom: 3%; 
+}
+    .block3 .teachergallery {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-bottom: 3%;
+        margin-left: 15%;
+    }
+    .teacher {
+        text-align: left;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        /* font-size: normal;
+        font-weight: lighter; */
+    }
+    .teacher img {
+        height: 30%;
+        width: auto;
+    }
+    .theachergallery h1{
+        font-size: xx-small;
+    }
+
+    .block3 .teachergallery::-webkit-scrollbar {
+        height: 6px;
+    }
+    .block3 .teachergallery::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    .block3 .teachergallery::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+/* страница 4 как поступить */
+.block4{
+    background-color: white;
+    color: black;
+    margin:0;
+    padding: 0;
+    padding-bottom: 3%; 
+}   
+    .block4 .howto{
+        margin-left:15%;
+        margin-right:15%;
+        margin-top:3%;
+    }
+
+    .contacts {
+        margin-left:15%;
+    }
+    .contacts p {
+        margin-right: 12%;
+        font-weight: lighter;
+        display: inline-block;
+    }
+    .block4 .gallerychoice{
+        margin-top: 2%;
+    }
+
+    .block4 table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .block4 th, td {
+        padding: 20px;
+        text-align: left;
+    }
+    .block4 th {
+        font-size: x-large;
+        font-weight: lighter;
+    }
+
+    .block4 td {
+        vertical-align: top;
+    }
+
+    .block4 tr {
+        border-bottom: 2px solid black;
+    }
+
+    .block4 .multi-line div {
+        margin-bottom: 10px;
+    }
+    .block4 tr:last-child {
+        border-bottom: none;
+    }
+
+/* страница 5 достижения */
+.block5{
+    background-color: black;
+    color: white;
+    margin:0;
+    padding: 0;
+    padding-bottom: 3%; 
+}
+    .block5 h3 {
+        margin-top: 6%;
+    }
+    .block5 h3::before,
+    .block5 h3::after {
+    background-color: white;
+    }
+    .block5 .gallerychoice label{
+    margin-top: 2%;
+    color: #434343;
+    }
+    .block5 .gallerychoice label:hover{
+    color: white;
+    }
+    .block5 .gallerychoice input[type=radio]:checked + label {
+    color: white;
+    }
+    .block5 label::after {
+    background-color: white;
+    }
+    .block5 .howto {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-top: 3%;
+        margin-left:15%;
+        /* width: 100vw;
+        height: 100vh; */
+    }
+    .block5 .howto img {
+        height: 20%;
+        width: auto;
+        margin-right: 15px;
+        flex-shrink: 0;
+
+    }
+    .block5 .howto::-webkit-scrollbar {
+        height: 6px;
+    }
+    .block5 .howto::-webkit-scrollbar-thumb {
+        background: #555;
+        /* border-radius: 6px; */
+    }
+    .block5 .howto::-webkit-scrollbar-thumb:hover {
+        background: #888;
+    }
+
+/* страница 6 активность */
+.block6{
+    background-color: white;
+    color: black;
+    margin:0;
+    padding: 0;
+    margin-top: 4%;
+    padding-bottom: 3%; 
+}
+    .block6 p {
+        margin-top: 3%;
+        margin-left: 15%;
+    }
+    .block6 .activityblock {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-top: 4%;
+        margin-bottom: 3%;
+        margin-left: 15%;
+    }
+    .block6 .activityblock img {
+        height: 250px;
+        width: auto;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+    .block6 .activityblock::-webkit-scrollbar {
+        height: 6px;
+    }
+    .block6 .activityblock::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    .block6 .activityblock::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+/* страница 7 партнёры */
+.block7{
+    background-color: white;
+    color: black;
+    margin:0;
+    padding: 0;
+ }
+    .partners {
+        margin-top: 5%;
+        margin-bottom: 6%;
+        margin-left:15%;
+        justify-content: left;
+    }
+    .partnersimg{
+        height: 100px;
+        width: auto;
+        margin-right:5%;
+    }
+
+/* страница 8 программа */
+.block8{
+    background-color: white;
+    color: black;
+    margin:0;
+    padding: 0;
+    padding-bottom: 3%; 
+}
+    .block8 .block8label {
+    font-size: x-large;
+    }
+    .block8 .kurs{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin-top: 4%;
+        margin-left:0;
+    }
+    .block8 .gallerychoice{
+        margin-top: 3%;
+    }
+    .howto .gallerychoice label{
+        margin-left:0;
+        margin-right:7%;
+    }
+
+    .nobotom{
+        border-bottom: none;
+    }
+    .block8 table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .block8 th, td {
+        padding: 20px;
+        text-align: left;
+    }
+    .block8 th {
+        font-size: x-large;
+        font-weight: lighter;
+    }
+
+    .block8 td {
+        vertical-align: top;
+    }
+
+    .block8 tr {
+        border-bottom: 2px solid black;
+    }
+
+    .block8 .multi-line div {
+        margin-bottom: 10px;
+    }
+    .block8 tr:last-child {
+        border-bottom: none;
+    }
+    
+    .block8 .howto {
+    margin-top: 40px;
+    margin-top: 4%;
+    margin-left: 15%;
+    height: 600px;
+    }
+
+.footer {
+    background-color: black;
+    color: white;
+}
+
+    .xx2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-right: #CBCBCB 2px;
+    }
+    .xx2 table {
+        display: inline-block;
+    }

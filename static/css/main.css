@@ -65,6 +65,14 @@ h3::after {
     bottom: -7px;
 }
 
+.twoclmnwgallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-left: 15%;
+    margin-top: 4%;
+    font-weight: lighter;
+}
 /*НАВИГАЦИЯ*/
 .nav {
     position: -webkit-sticky;
@@ -197,16 +205,20 @@ h3::after {
     margin-bottom: 5%;
 }  
     .gallery{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
         margin-top: 4%;
-        margin-left: 15%;
         font-weight:lighter;
     }
-    .gallery img {
+    .gallery-container img {
+        margin-top: 80px;
         height: 400px;
         width: auto;
+    }
+    .gallery-container{
+        text-align: center;
+        margin-right:14%;
+    }
+    .block2 p {
+        margin-top: 0;
     }
 
     .gallerychoice {
@@ -485,21 +497,3 @@ h3::after {
     border-right: #CBCBCB 2px;
 }
     
-    .a1xx{
-        margin-left: 18%;
-    }
-
-    .ax1x {
-        margin-left: 18%;
-    }
-
-    .ax1x input {
-        width: 100%;
-        height: auto;
-    }
-    .ax1x button {
-        width: 100%;
-    }
-
-    .axx1 {
-    }

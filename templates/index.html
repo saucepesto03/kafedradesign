@@ -64,7 +64,16 @@
         <input type="radio" id="mag1" value="/template/mag2block.html" name="choice1" data-target="contentblock1">
         <label for="mag1">МАГИСТРАТУРА</label>
     </div>
-        <div class = "gallery" id="contentblock1">
+        <div class="twoclmnwgallery">
+            <div class = "gallery" id="contentblock1">
+            </div>
+            <div class="gallery-container" data-gallery-id="gallery1">
+                <img class="galleryImage" src="{{ url_for('static', filename='png/bakalavr/image1.png') }}" alt="GalleryImage">
+                <div class="gallery-controls">
+                    <button class="prevButton">Previous</button>
+                    <button class="nextButton">Next</button>
+                </div>
+            </div>
         </div>
 </div>
 <!-- страница 3 преподаватели -->
@@ -192,57 +201,33 @@
         <input type="radio" id="dissred" value="/template/dissred8block.html" name="choice4" data-target="contentblock8">
         <label class="block8label" for="dissred">ДИЗАЙН СРЕДЫ</label>
     </div>
+    <div class="twoclmnwgallery">
         <div class = "howto" id="contentblock8">
         </div>
+        <div class="gallery-container" data-gallery-id="gallery1">
+            <img class="galleryImage" src="{{ url_for('static', filename='png/bakalavr/image1.png') }}" alt="GalleryImage">
+            <div class="gallery-controls">
+                <button class="prevButton">Previous</button>
+                <button class="nextButton">Next</button>
+            </div>
+        </div>
+    </div>
+        
 </div>
 
 
 <div class="footer">
-    <div class="a1xx">
-        <img class="kafdislogo" src="/static/png/logo_kafdis.png" alt="logo">
-        <div>
-            <table>
-                <tbody>
-                        <tr>
-                            <th><a>О кафедре</a></th>
-                            <th><a>Достижения</a></th>
-                        </tr>
-                        <tr>
-                            <td><a>Преподаватели</a></td>
-                            <td><a>Активность</a></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><a>Партнёры</a></td>
-                        </tr>
-                        <tr>
-                            <th><a>Как поступить</a></th>
-                            <th><a>Программа</a></th>
-                        </tr>
-                </tbody>
-            </table>
+    <div class="firstfootercolumn">
+        <img src="" alt="footerimg">
+        <div class="footernav">
+
         </div>
     </div>
-    <div class="ax1x">
-        <div class="links">
-            <input type="text" name="name" placeholder="Имя">
-            <input type="email" name="email" placeholder="email">
-            <input type="tel" name="phone" placeholder="Телефон">
-            <button></button>
-            <p>если остались вопросы, оставьте заявку - мы вам перезвоним</p>
-            <div class="other">
-                <p>Приёмная комиссия: 8 (800) 100-19-30</p>
-                <p>Адрес: Ростов-на-Дону, ул. Петровская, 49 корпус 24,</br>
-                    Дни открытых дверей
-                </p>
-            </div>
-        </div>
+    <div class="scondfootercolumn">
+        <input type="text" id="name" name="name" required>
     </div>
-    <div class="axx1">
-        <a>1</a>
-        <a>2</a>
-        <a>3</a>
-        <a>4</a>
+    <div class="thirdfootercolumn">
+
     </div>
 </div>
 

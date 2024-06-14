@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-        // авный скрол
+// плавный скрол
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -84,7 +84,70 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// галерея
+// галерея 1
+
+document.addEventListener('DOMContentLoaded', function() {
+    const galleries = {
+        gallery1: {
+            bak1: 
+            [
+                'static/png/bakalavr/image1.png', 'static/png/bakalavr/image2.png', 'static/png/bakalavr/image3.png', 'static/png/bakalavr/image4.png'
+                , 'static/png/bakalavr/image5.png', 'static/png/bakalavr/image6.png'
+            ],
+            mag1: 
+            [
+                'static/png/magistrat/image1.png', 'static/png/magistrat/image2.png', 'static/png/magistrat/image3.png', 'static/png/magistrat/image4.png'
+                , 'static/png/magistrat/image5.png'
+            ]
+        }
+
+    };
+
+    function initializeGallery(galleryContainer, images) {
+        let currentIndex = 0;
+
+        const imgElement = galleryContainer.querySelector('.galleryImage');
+        const prevButton = galleryContainer.querySelector('.prevButton');
+        const nextButton = galleryContainer.querySelector('.nextButton');
+
+        function showImage() {
+            imgElement.src = images[currentIndex];
+        }
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage();
+        }
+
+        function showPrevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage();
+        }
+
+        prevButton.addEventListener('click', showPrevImage);
+        nextButton.addEventListener('click', showNextImage);
+
+        showImage();
+    }
+
+    function updateGallery(galleryId, setId) {
+        const galleryContainer = document.querySelector(`.gallery-container[data-gallery-id="${galleryId}"]`);
+        if (galleryContainer && galleries[galleryId][setId]) {
+            initializeGallery(galleryContainer, galleries[galleryId][setId]);
+        }
+    }
+
+    document.querySelectorAll('input[name="choice1"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            const targetId = this.dataset.target;
+            const setId = this.id;
+            updateGallery('gallery1', setId);
+        });
+    });
+
+    updateGallery('gallery1', 'bak1');
+});
+// =====================================================================================
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     console.log("Document loaded, initializing galleries...");

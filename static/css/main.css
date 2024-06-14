@@ -16,6 +16,22 @@ html {
     visibility: hidden;
 }
 
+.grid-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Три столбца равной ширины */
+    gap: 5px; /* Промежуток между ячейками */
+  }
+  
+  .grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Три столбца в строке */
+  }
+  
+  .grid-cell {
+    padding: 10px;
+    border-bottom: 1px solid #000000; /* Полоса на нижней границе ячейки */
+  }
+
 body{
     padding: 0;
     margin: 0;
@@ -262,9 +278,6 @@ h3::after {
     .teacher {
         text-align: left;
         margin-right: 20px;
-        /* margin-bottom: 20px; */
-        /* font-size: normal;
-        font-weight: lighter; */
     }
     .teacher .FIO{
         font-size: large;
@@ -311,35 +324,6 @@ h3::after {
     }
     .block4 .gallerychoice{
         margin-top: 2%;
-    }
-
-    .block4 table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    .block4 th, td {
-        padding: 20px;
-        text-align: left;
-    }
-    .block4 th {
-        font-size: x-large;
-        font-weight: lighter;
-    }
-
-    .block4 td {
-        vertical-align: top;
-    }
-
-    .block4 tr {
-        border-bottom: 2px solid black;
-    }
-
-    .block4 .multi-line div {
-        margin-bottom: 10px;
-    }
-    .block4 tr:last-child {
-        border-bottom: none;
     }
 
 /* страница 5 достижения */
@@ -481,33 +465,9 @@ h3::after {
     .nobotom{
         border-bottom: none;
     }
-    .block8 table {
-        width: 100%;
-        border-collapse: collapse;
-    }
 
-    .block8 th, td {
-        padding: 20px;
-        text-align: left;
-    }
-    .block8 th {
-        font-size: x-large;
-        font-weight: lighter;
-    }
-
-    .block8 td {
-        vertical-align: top;
-    }
-
-    .block8 tr {
-        border-bottom: 2px solid black;
-    }
-
-    .block8 .multi-line div {
-        margin-bottom: 10px;
-    }
-    .block8 tr:last-child {
-        border-bottom: none;
+    .intotable{
+        width: auto;
     }
     
     .block8 .howto {
@@ -528,12 +488,7 @@ h3::after {
     .a1xx{
         margin-left: 18%;
     }
-    .a1xx table {
-        width: 100%;
-    }
-    .a1xx th, td{
-        text-align: left;
-    }
+
     .ax1x {
         margin-left: 18%;
     }

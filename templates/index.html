@@ -73,8 +73,8 @@
     <div class="teachergallery">
         <div class="teacher">
             <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher1.png') }}" alt="Teacher">
-            <h1>Бердник Татьяна</br>
-                Олеговна</h1>
+            <div class="FIO">Бердник Татьяна</br>
+                Олеговна</div>
             <p>заведующая кафедрой,</br>
                 кандидат филосовских наук,</br>
                 профессор
@@ -82,42 +82,42 @@
         </div>
         <div class="teacher">
             <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher2.png') }}" alt="Teacher">
-            <h1>Наумова Екатерина</br>
-                Григорьевна</h1>
+            <div class="FIO">Наумова Екатерина</br>
+                Григорьевна</div>
             <p>доцент,</br>
                 кандидат филосовских наук
             </p>
         </div>
         <div class="teacher">
             <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher3.png') }}" alt="Teacher">
-            <h1>Клименко Ирина</br>
-                Ахсаровна</h1>
+            <div class="FIO">Клименко Ирина</br>
+                Ахсаровна</div>
                 <p>доцент,</br>
                     кандидат филосовских наук
                 </p>
         </div>
         <div class="teacher">
             <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher4.png') }}" alt="Teacher">
-            <h1>Куприянова Елена</br>
-                Владимировна</h1>
+            <div class="FIO">Куприянова Елена</br>
+                Владимировна</div>
             <p>доцент</p> 
         </div>
         <div class="teacher">
             <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher5.png') }}" alt="Teacher">
-            <h1>Кожина Наталия</br>
-                Васильевна</h1>
+            <div class="FIO">Кожина Наталия</br>
+                Васильевна</div>
             <p>доцент</p>
         </div>
         <div class="teacher">
             <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher6.png') }}" alt="Teacher">
-            <h1>Травин Александр</br>
-                Владимирович</h1>
+            <div class="FIO">Травин Александр</br>
+                Владимирович</div>
             <p>доцент</p>
         </div>
         <div class="teacher">
             <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher7.png') }}" alt="Teacher">
-            <h1>Травин Константин</br>
-                Владимирович</h1>
+            <div class="FIO">Травин Константин</br>
+                Владимирович</div>
             <p>доцент</p>
         </div>
     </div>
@@ -198,13 +198,37 @@
 
 
 <div class="footer">
-    <div class="xx2">
+    <div class="a1xx">
         <img class="kafdislogo" src="/static/png/logo_kafdis.png" alt="logo">
+        <div>
+            <table>
+                <tbody>
+                        <tr>
+                            <th><a>О кафедре</a></th>
+                            <th><a>Достижения</a></th>
+                        </tr>
+                        <tr>
+                            <td>Преподаватели</td>
+                            <td>Активность</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Партнёры</td>
+                        </tr>
+                        <tr>
+                            <th>Как поступить</th>
+                            <th>Программа</th>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="ax1x">
         <div class="links">
             <input type="text" name="name" placeholder="Имя">
             <input type="email" name="email" placeholder="email">
             <input type="tel" name="phone" placeholder="Телефон">
-            <p>если остались вопросы </p>
+            <p>если остались вопросы, оставьте заявку - мы вам перезвоним</p>
         </div>
     </div>
 </div>

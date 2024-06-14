@@ -261,25 +261,27 @@ h3::after {
     }
     .teacher {
         text-align: left;
-        margin-left: 20px;
         margin-right: 20px;
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
         /* font-size: normal;
         font-weight: lighter; */
+    }
+    .teacher .FIO{
+        font-size: large;
     }
     .teacher img {
         height: 30%;
         width: auto;
     }
-    .theachergallery h1{
-        font-size: xx-small;
+    .theacher p{
+        font-size: x-small;
     }
 
     .block3 .teachergallery::-webkit-scrollbar {
         height: 6px;
     }
     .block3 .teachergallery::-webkit-scrollbar-thumb {
-        background: #888;
+        background: #b8b8b8;
     }
     .block3 .teachergallery::-webkit-scrollbar-thumb:hover {
         background: #555;
@@ -518,13 +520,22 @@ h3::after {
 .footer {
     background-color: black;
     color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    border-right: #CBCBCB 2px;
 }
 
-    .xx2{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        border-right: #CBCBCB 2px;
-    }
-    .xx2 table {
+    .a1xx table {
         display: inline-block;
+    }
+
+    .a1xxa{
+        
+    }
+
+    .ax1x {
+
+    }
+    .axx1 {
+
     }

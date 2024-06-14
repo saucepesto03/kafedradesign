@@ -524,18 +524,27 @@ h3::after {
     grid-template-columns: 1fr 1fr 0.5fr;
     border-right: #CBCBCB 2px;
 }
-
+    
+    .a1xx{
+        margin-left: 18%;
+    }
     .a1xx table {
-        display: inline-block;
+        width: 100%;
     }
-
-    .a1xxa{
-        
+    .a1xx th, td{
+        text-align: left;
     }
-
     .ax1x {
-
+        margin-left: 18%;
     }
-    .axx1 {
 
+    .ax1x input {
+        width: 100%;
+        height: auto;
+    }
+    .ax1x button {
+        width: 100%;
+    }
+
+    .axx1 {
     }

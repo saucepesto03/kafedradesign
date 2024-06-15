@@ -21,13 +21,12 @@
         <a href='#about'>о кафедре</a>
         <a href='#exam'>как поступить</a>
         <a href='#awards'>достижения</a>
-        <a href='#prog'>программа</a>
-        <a href='#forma' class="aform"><img src="/static/png/a_form.png" alt="форма="></a>
+        <a href='' class="aform"><img src="/static/png/a_form.png" alt="форма="></a>
     </div>
 
 <!-- страница 1 главная -->
-<div id="about" class="block1">
 <span class="anchor" id="about"></span>
+<div class="block1">
         <!-- логотип и формы -->
         <img class="kafdislogo" src="/static/png/logo_kafdis.png" alt="logo">
         <img class="bigshape1" src="/static/png/big_shape.png" alt="bigshape1">
@@ -56,6 +55,7 @@
     </div>
 </div>
 <!-- страница 2 галерея бак маг -->
+ 
 <div class="block2">
     <div class="gallerychoice">
         <input type="radio" id="bak1" value="/template/bak2block.html" name="choice1" data-target="contentblock1" checked>
@@ -68,10 +68,10 @@
             <div class = "gallery" id="contentblock1">
             </div>
             <div class="gallery-container" data-gallery-id="gallery1">
-                <img class="galleryImage" src="{{ url_for('static', filename='png/bakalavr/image1.png') }}" alt="GalleryImage">
+                <img class="galleryImage" src="/static/png/bakalavr/image1.png" alt="GalleryImage">
                 <div class="gallery-controls">
-                    <button class="prevButton">Previous</button>
-                    <button class="nextButton">Next</button>
+                    <button class="prevButton" id="prev"><img src="/static/svg/prevbutton.svg"></button>
+                    <button class="nextButton" id="next"><img src="/static/svg/nextbutton.svg"></button>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@
     <h3>ПРЕПОДАВАТЕЛИ</h3>
     <div class="teachergallery">
         <div class="teacher">
-            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher1.png') }}" alt="Teacher">
+            <img class="galleryImage" src="/static/png/teachers/teacher1.png" alt="Teacher">
             <div class="FIO">Бердник Татьяна</br>
                 Олеговна</div>
             <p>заведующая кафедрой,</br>
@@ -90,7 +90,7 @@
             </p>
         </div>
         <div class="teacher">
-            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher2.png') }}" alt="Teacher">
+            <img class="galleryImage" src="/static/png/teachers/teacher2.png" alt="Teacher">
             <div class="FIO">Наумова Екатерина</br>
                 Григорьевна</div>
             <p>доцент,</br>
@@ -98,7 +98,7 @@
             </p>
         </div>
         <div class="teacher">
-            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher3.png') }}" alt="Teacher">
+            <img class="galleryImage" src="/static/png/teachers/teacher3.png" alt="Teacher">
             <div class="FIO">Клименко Ирина</br>
                 Ахсаровна</div>
                 <p>доцент,</br>
@@ -106,25 +106,25 @@
                 </p>
         </div>
         <div class="teacher">
-            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher4.png') }}" alt="Teacher">
+            <img class="galleryImage" src="/static/png/teachers/teacher4.png" alt="Teacher">
             <div class="FIO">Куприянова Елена</br>
                 Владимировна</div>
             <p>доцент</p> 
         </div>
         <div class="teacher">
-            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher5.png') }}" alt="Teacher">
+            <img class="galleryImage" src="/static/png/teachers/teacher5.png" alt="Teacher">
             <div class="FIO">Кожина Наталия</br>
                 Васильевна</div>
             <p>доцент</p>
         </div>
         <div class="teacher">
-            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher6.png') }}" alt="Teacher">
+            <img class="galleryImage" src="/static/png/teachers/teacher6.png" alt="Teacher">
             <div class="FIO">Травин Александр</br>
                 Владимирович</div>
             <p>доцент</p>
         </div>
         <div class="teacher">
-            <img class="galleryImage" src="{{ url_for('static', filename='png/teachers/teacher7.png') }}" alt="Teacher">
+            <img class="galleryImage" src="/static/png/teachers/teacher7.png" alt="Teacher">
             <div class="FIO">Травин Константин</br>
                 Владимирович</div>
             <p>доцент</p>
@@ -132,13 +132,13 @@
     </div>
 </div>
 <!-- страница 4 как поступить -->
-<div id="exam" class = "block4">
 <span class="anchor" id="exam"></span>
+<div class = "block4">
     <h3>КАК ПОСТУПИТЬ</h3>
     <div class="contacts">
         <p>Приёмная комиссия:8 (900) 100-19-30</p>
-        <p>Дни открытых дверей</p>
-        <p>Официальный сайт ДГТУ</p>
+        <a href="https://donstu.ru/events/afishi/den-otkrytykh-dverey-fakulteta-shkola-arkhitektury-dizayna-i-iskusstv-22/">Дни открытых дверей</a>
+        <a href="https://donstu.ru/">Официальный сайт ДГТУ</a>
     </div>
     <div class="gallerychoice">
         <input type="radio" id="bak2" value="/template/bak4block.html" name="choice2" data-target="contentblock4" checked>
@@ -151,7 +151,8 @@
         </div>
 </div>
 <!-- страница 5 достижения -->
-<div id="awards" class="block5">
+<span class="anchor" id="awards"></span>
+<div class="block5">
     <h3>ДОСТИЖЕНИЯ</h3>
     <div class="gallerychoice">
         <input type="radio" id="prep" value="/template/prepod5block.html" name="choice3" data-target="contentblock5" checked>
@@ -173,10 +174,10 @@
         В рамках научной работы студенты принимают</br>
         участие в конференциях и круглых столах.</p>
     <div class="activityblock">
-        <img class="galleryImage" src="{{ url_for('static', filename='png/activity/activity1.png') }}" alt="GalleryImage">
-        <img class="galleryImage" src="{{ url_for('static', filename='png/activity/activity2.png') }}" alt="GalleryImage">
-        <img class="galleryImage" src="{{ url_for('static', filename='png/activity/activity3.png') }}" alt="GalleryImage">
-        <img class="galleryImage" src="{{ url_for('static', filename='png/activity/activity4.png') }}" alt="GalleryImage">
+        <img class="galleryImage" src="/static/png/activity/activity1.png" alt="GalleryImage">
+        <img class="galleryImage" src="/static/png/activity/activity2.png" alt="GalleryImage">
+        <img class="galleryImage" src="/static/png/activity/activity3.png" alt="GalleryImage">
+        <img class="galleryImage" src="/static/png/activity/activity4.png" alt="GalleryImage">
     </div>
 </div>
 <!-- страница 7 партнёры -->
@@ -184,52 +185,43 @@
     <h3>ПАРТНЁРЫ</h3>
     <div class="partners">
         <div class="partncont">
-        <img class="partnersimg" src="{{ url_for('static', filename='png/partners/partners1.png') }}" alt="Partners">
-        <img class="partnersimg" src="{{ url_for('static', filename='png/partners/partners2.png') }}" alt="Partners">
-        <img class="partnersimg" src="{{ url_for('static', filename='png/partners/partners3.png') }}" alt="Partners">
-        <img class="partnersimg" src="{{ url_for('static', filename='png/partners/partners4.png') }}" alt="Partners">
+        <img class="partnersimg" src="/static/png/partners/partners1.png" alt="Partners">
+        <img class="partnersimg" src="/static/png/partners/partners2.png" alt="Partners">
+        <img class="partnersimg" src="/static/png/partners/partners3.png" alt="Partners">
+        <img class="partnersimg" src="/static/png/partners/partners4.png" alt="Partners">
         </div>
     </div>
 </div>
-<!-- страница 8 программа -->
-<div id="prog" class="block8 ">
-    <h3>ПРОГРАММА</h3>
-    <div class="gallerychoice">
-        <input type="radio" id="comdis" value="/template/comdis8block.html" name="choice4" data-target="contentblock8" checked>
-        <label class="block8label" for="comdis">КОММУНИКАТИВНЫЙ ДИЗАЙН</label>
-
-        <input type="radio" id="dissred" value="/template/dissred8block.html" name="choice4" data-target="contentblock8">
-        <label class="block8label" for="dissred">ДИЗАЙН СРЕДЫ</label>
-    </div>
-    <div class="twoclmnwgallery">
-        <div class = "howto" id="contentblock8">
-        </div>
-        <div class="gallery-container" data-gallery-id="gallery1">
-            <img class="galleryImage" src="{{ url_for('static', filename='png/bakalavr/image1.png') }}" alt="GalleryImage">
-            <div class="gallery-controls">
-                <button class="prevButton">Previous</button>
-                <button class="nextButton">Next</button>
-            </div>
-        </div>
-    </div>
-        
-</div>
-
-
+<footer>
 <div class="footer">
     <div class="firstfootercolumn">
-        <img src="" alt="footerimg">
-        <div class="footernav">
+        <img src="\static\svg\logo.svg" alt="footerimg" id="footerlogo">
+    </div>
 
+    <div class="scondfootercolumn">
+        <div class="inputs">
+            <input type="name" id="name" name="name" required>
+            <input type="phone" id="phone" name="phone" required>
+            <input type="email" id="email" name="email" required>
+            <button>отправить</button>
+            <p>Если остались вопросы, оставьте заявку - мы перезвоним</p>
         </div>
     </div>
-    <div class="scondfootercolumn">
-        <input type="text" id="name" name="name" required>
-    </div>
-    <div class="thirdfootercolumn">
 
+    <div class="thirdfootercolumn">
+        <a href="https://vk.com/design_donstu" id="vk"><img src="\static\png\vk.png" alt="vk"></a>
+        <a href="https://t.me/design_dstu" id="tg"><img src="\static\png\tg.png" alt="tg"></a>
+        <a href="https://donstu.ru/" id="dstulogo"><img src="\static\png\dstu_logo.png" alt="dstulogo"></a>
+        <a id="forma"><img src="\static\png\a_form.png" alt="forma="></a>
     </div>
 </div>
+<!-- <div class="other">
+    <p>Приёмная комиссия: 8 (800) 100-19-30</p>
+    <p>Адрес: Ростов-на-Дону, ул.Петровская, 49 корпус 24,</br>
+        ауд. 24-506, пн-пт, 8:30-17:00</p>
+        
+</div> -->
+</footer>
 
 <script src="/static/js/main.js"></script>
 </body>

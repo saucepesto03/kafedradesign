@@ -12,24 +12,38 @@ html {
 .anchor {
     display: block;
     position: relative;
-    top: -100px; /* Поднимите якорь на 100px выше */
+    top: -100px;
     visibility: hidden;
 }
 
 .grid-table {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Три столбца равной ширины */
-    gap: 5px; /* Промежуток между ячейками */
+    gap: 5px;
   }
-  
+
   .grid-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Три столбца в строке */
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid #000000;
   }
-  
+
   .grid-cell {
     padding: 10px;
-    border-bottom: 1px solid #000000; /* Полоса на нижней границе ячейки */
+
+  }
+  .grid-row:last-child{
+    border-bottom: none;
+  }
+
+  .gallery-container button {
+    border:none;
+    width: 49px;
+    height: 21px;
+  }
+  .gallery-container button img{
+    width: auto;
+    height: 100%;
+    margin: 0;
   }
 
 body{
@@ -220,7 +234,6 @@ h3::after {
     .block2 p {
         margin-top: 0;
     }
-
     .gallerychoice {
 	    display: flex;
         font-size:xx-large;
@@ -320,6 +333,13 @@ h3::after {
     padding: 0;
     padding-bottom: 3%; 
 }   
+    .block4 a {
+        text-decoration: none;
+        color:black;
+        margin-right: 12%;
+        font-weight: lighter;
+        display: inline-block;
+    }
     .block4 .howto{
         margin-left:15%;
         margin-right:15%;
@@ -439,7 +459,7 @@ h3::after {
  }
     .partners {
         margin-top: 5%;
-        margin-bottom: 6%;
+        margin-bottom: 8%;
         margin-left:15%;
         justify-content: left;
     }
@@ -467,11 +487,12 @@ h3::after {
         margin-left:0;
     }
     .block8 .gallerychoice{
-        margin-top: 3%;
+        margin-top: 2%;
     }
     .howto .gallerychoice label{
         margin-left:0;
         margin-right:7%;
+        white-space: nowrap;
     }
 
     .nobotom{
@@ -483,17 +504,65 @@ h3::after {
     }
     
     .block8 .howto {
-    margin-top: 40px;
-    margin-top: 4%;
-    margin-left: 15%;
+    /* margin-top: 40px; */
+    /* margin-top: 2%; */
+    /* margin-left: 15%; */
     height: 600px;
     }
 
+
+footer { background-color: black;}
 .footer {
     background-color: black;
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 0.5fr;
     border-right: #CBCBCB 2px;
+    margin-left:7%;
+    margin-right:7%;
 }
-    
+    #footerlogo{
+        width:50%;
+        height: auto;
+    }
+    .footer input {
+        width: 100%;
+        height: auto;
+    }
+    .footer button {
+        width: 100%;
+    }
+
+    .firstfootercolumn {
+        margin-top: 2%;
+        text-align: left;
+    }
+
+        .firstfootercolumn img {
+            padding: 0;
+            margin: 0;
+        }
+    .scondfootercolumn {
+        margin-top: 2%;
+    }
+    .thirdfootercolumn {
+        margin-top: 2%;
+        text-align: center;
+    }
+
+        .thirdfootercolumn img {
+            margin-bottom: 5%;
+            margin-left: 100px;
+        }
+        #forma img{
+            width:70px;
+            height:auto;
+        }
+       #dstulogo img {
+            width:58px;
+            height: auto;
+        }
+    .other{
+        color: white;
+        background-color: black;
+    }

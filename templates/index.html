@@ -6,6 +6,7 @@
     <title>Кафедра</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="icon" href="#">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com">
 </head>
 <body>
     <!-- навигацая -->
@@ -192,36 +193,46 @@
         </div>
     </div>
 </div>
-<footer>
 <div class="footer">
+    <div class="footergrid">
     <div class="firstfootercolumn">
-        <img src="\static\svg\logo.svg" alt="footerimg" id="footerlogo">
+        <img src="/static/png/footerlogo.png" alt="footerimg" id="footerlogo">
     </div>
 
     <div class="scondfootercolumn">
         <div class="inputs">
-            <input type="name" id="name" name="name" required>
-            <input type="phone" id="phone" name="phone" required>
-            <input type="email" id="email" name="email" required>
-            <button>отправить</button>
+            <form actio="/send_mail" method="POST">
+            <input type="text" id="name" name="name" placeholder="имя" required>
+            <input type="email" id="email" name="email" placeholder="email" required>
+            <input type="tel" id="phone" name="phone" placeholder="телефон" required>
+            <button type="submit">Отправить</button>
             <p>Если остались вопросы, оставьте заявку - мы перезвоним</p>
+            </form>
         </div>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <ul class=flashes>
+          {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+        {% endwith %}
     </div>
 
     <div class="thirdfootercolumn">
-        <a href="https://vk.com/design_donstu" id="vk"><img src="\static\png\vk.png" alt="vk"></a>
-        <a href="https://t.me/design_dstu" id="tg"><img src="\static\png\tg.png" alt="tg"></a>
-        <a href="https://donstu.ru/" id="dstulogo"><img src="\static\png\dstu_logo.png" alt="dstulogo"></a>
-        <a id="forma"><img src="\static\png\a_form.png" alt="forma="></a>
+        <a href="https://vk.com/design_donstu" id="vk"><img src="/static/png/vk.png" alt="vk"></a>
+        <a href="https://t.me/design_dstu" id="tg"><img src="/static/png/tg.png" alt="tg"></a>
+        <a href="https://donstu.ru/" id="dstulogo"><img src="/static/png/dstu_logo.png" alt="dstulogo"></a>
+        <a id="forma"><img src="static/png/a_form.png" alt="forma="></a>
+    </div>
+    </div>
+    <div class="other">
+        <p>Приёмная комиссия: 8 (800) 100-19-30</p>
+        <p>Адрес: Ростов-на-Дону, ул.Петровская, 49 корпус 24, ауд. 24-506, пн-пт, 8:30-17:00</p>
+        <a href="https://donstu.ru/events/afishi/den-otkrytykh-dverey-fakulteta-shkola-arkhitektury-dizayna-i-iskusstv-22/">Дни открытых дверей</a>
     </div>
 </div>
-<!-- <div class="other">
-    <p>Приёмная комиссия: 8 (800) 100-19-30</p>
-    <p>Адрес: Ростов-на-Дону, ул.Петровская, 49 корпус 24,</br>
-        ауд. 24-506, пн-пт, 8:30-17:00</p>
-        
-</div> -->
-</footer>
 
 <script src="/static/js/main.js"></script>
 </body>

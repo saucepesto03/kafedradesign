@@ -66,26 +66,25 @@ document.addEventListener('DOMContentLoaded', () => {
         if (choice.checked) {
             const containerId = choice.getAttribute('data-target');
             changeContent(containerId);
-        }
+        }       
     });
 });
 
 // плавный скрол
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+    // document.querySelectorAll('nav a').forEach(anchor => {
+    //     anchor.addEventListener('click', function (e) {
+    //         e.preventDefault();
 
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
+    //         const targetId = this.getAttribute('href').substring(1);
+    //         const targetElement = document.getElementById(targetId);
 
-        targetElement.scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+    //         targetElement.scrollIntoView({
+    //             behavior: 'smooth'
+    //         });
+    //     });
+    // });
 
-// галерея 1
-
+// галерея
 document.addEventListener('DOMContentLoaded', function() {
     const galleries = {
         gallery1: {
@@ -147,69 +146,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateGallery('gallery1', 'bak1');
 });
-// =====================================================================================
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     console.log("Document loaded, initializing galleries...");
-//     const galleries = document.querySelectorAll('.gallery-container');
-
-//     if (galleries.length === 0) {
-//         console.error("No galleries found on the page.");
-//     } else {
-//         console.log(`${galleries.length} galleries found.`);
-//     }
-    
-//     const galleryImages = {
-//         gallery1: [
-//             "{{ url_for('static', filename='png/bakalavr/image1.png') }}",
-//             "{{ url_for('static', filename='png/bakalavr/image2.png') }}",
-//             "{{ url_for('static', filename='png/bakalavr/image3.png') }}",
-//             "{{ url_for('static', filename='png/bakalavr/image4.png') }}",
-//             "{{ url_for('static', filename='png/bakalavr/image5.png') }}",
-//             "{{ url_for('static', filename='png/bakalavr/image6.png') }}"
-//         ]
-//     };
-    
-//     galleries.forEach(gallery => {
-//         const galleryId = gallery.getAttribute('data-gallery-id');
-//         const imageElement = gallery.querySelector('.galleryImage');
-//         const prevButton = gallery.querySelector('.prevButton');
-//         const nextButton = gallery.querySelector('.nextButton');
-
-//         console.log(`Initializing gallery ${galleryId}`);
-        
-//         if (!imageElement) {
-//             console.error(`No image element found in gallery ${galleryId}`);
-//         }
-//         if (!prevButton) {
-//             console.error(`No previous button found in gallery ${galleryId}`);
-//         }
-//         if (!nextButton) {
-//             console.error(`No next button found in gallery ${galleryId}`);
-//         }
-
-//         const images = galleryImages[galleryId];
-//         let currentIndex = 0;
-
-//         function updateImage() {
-//             console.log(`Updating image for gallery ${galleryId}, index ${currentIndex}`);
-//             imageElement.src = images[currentIndex];
-//             console.log(`New image source: ${imageElement.src}`);
-//         }
-
-//         prevButton.addEventListener('click', () => {
-//             currentIndex = (currentIndex - 1 + images.length) % images.length;
-//             console.log(`Previous button clicked for gallery ${galleryId}, new index ${currentIndex}`);
-//             updateImage();
-//         });
-
-//         nextButton.addEventListener('click', () => {
-//             currentIndex = (currentIndex + 1) % images.length;
-//             console.log(`Next button clicked for gallery ${galleryId}, new index ${currentIndex}`);
-//             updateImage();
-//         });
-
-//         // инициализация первого изображения
-//         updateImage();
-//     });
-// });

@@ -468,101 +468,102 @@ h3::after {
         width: auto;
         margin-right:5%;
     }
-
-/* страница 8 программа */
-.block8{
-    background-color: white;
-    color: black;
-    margin:0;
-    padding: 0;
-    padding-bottom: 3%; 
-}
-    .block8 .block8label {
-    font-size: x-large;
-    }
-    .block8 .kurs{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        margin-top: 4%;
-        margin-left:0;
-    }
-    .block8 .gallerychoice{
-        margin-top: 2%;
-    }
-    .howto .gallerychoice label{
-        margin-left:0;
-        margin-right:7%;
-        white-space: nowrap;
-    }
-
-    .nobotom{
-        border-bottom: none;
-    }
-
-    .intotable{
-        width: auto;
-    }
-    
-    .block8 .howto {
-    /* margin-top: 40px; */
-    /* margin-top: 2%; */
-    /* margin-left: 15%; */
-    height: 600px;
-    }
-
-
-footer { background-color: black;}
+/* футер */
 .footer {
     background-color: black;
     color: white;
-    display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr;
-    border-right: #CBCBCB 2px;
-    margin-left:7%;
-    margin-right:7%;
+    padding-top:3%;
+    padding-left:15%;
+    padding-right:15%;
+    padding-bottom: 3%;
+    font-weight: lighter;
+    text-align: center;
 }
-    #footerlogo{
-        width:50%;
-        height: auto;
+.footer p {
+    margin: 0;
+    padding: 0;
+}
+    .footergrid{
+        display:grid;
+        grid-template-columns: 1fr 1fr 0.5fr;
     }
-    .footer input {
-        width: 100%;
-        height: auto;
-    }
-    .footer button {
-        width: 100%;
-    }
-
-    .firstfootercolumn {
-        margin-top: 2%;
-        text-align: left;
-    }
-
-        .firstfootercolumn img {
-            padding: 0;
-            margin: 0;
-        }
-    .scondfootercolumn {
-        margin-top: 2%;
-    }
-    .thirdfootercolumn {
-        margin-top: 2%;
-        text-align: center;
-    }
-
-        .thirdfootercolumn img {
-            margin-bottom: 5%;
-            margin-left: 100px;
-        }
-        #forma img{
-            width:70px;
-            height:auto;
-        }
-       #dstulogo img {
-            width:58px;
+        #footerlogo{
+            width:50%;
             height: auto;
         }
-    .other{
-        color: white;
-        background-color: black;
-    }
+
+        .inputs input {
+            color:white;
+            background-color: black;
+            width: 100%;
+            height: 40px;
+            padding: 6px;
+            box-sizing: border-box;
+            border: 2px solid white;
+            border-radius: 2px;
+            margin-bottom:4%;
+        }
+        .inputs input::placeholder{
+            color: white;
+            font-family: "menoegrotesquepro";
+            font-weight: lighter;
+        }
+        .inputs button {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 4%;
+            box-sizing: border-box;
+            font-family: "menoegrotesquepro";
+        }
+
+        .firstfootercolumn {
+            margin-top: 2%;
+            text-align: left;
+        }
+
+            .firstfootercolumn img {
+                padding: 0;
+                margin: 0;
+            }
+
+        .scondfootercolumn {
+            margin-top: 2%;
+        }
+        .thirdfootercolumn {
+            margin-top: 2%;
+            margin-left:50%;
+            text-align: center;
+        }
+        .footer a {
+            text-decoration: none;
+            color:white;
+        }
+
+            .thirdfootercolumn img {
+                margin-bottom: 5%;
+                margin-left: 100px;
+            }
+
+            #forma img{
+                width:calc(61px*0.80);
+                height: auto;
+            }
+            #vk img{
+                width:calc(58px*0.80);
+                height: auto;
+            }
+            #tg img{
+                width:calc(58px*0.80);
+                height: auto;
+            }
+            #dstulogo img {
+                width:calc(58px*0.80);
+                height: auto;
+            }
+        .other {
+            margin-top: 3%;
+            display: inline-block;
+            text-align: center;
+        }
+
+            

@@ -1,38 +1,42 @@
 from flask import Flask, render_template, request, redirect, flash
 from flask_mail import Mail, Message
+from flask_wtf import FlaskForm, CSRFProtect
+from wtforms import StringField, EmailField, validators
+from dotenv import load_dotenv
+import os
+
+# Загрузить переменные окружения из .env файла
+load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Для использования flash сообщений
+app.secret_key = os.environ.get('SECRET_KEY')  # Использование переменной окружения для секретного ключа
 
-app.config['MAIL_SERVER'] = 'smtp.yourmailserver.com'  # Замените на сервер вашей почты
+# Настройка Flask-Mail
+app.config['MAIL_SERVER'] = 'smtp.yourmailserver.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'your_email@example.com'  # Замените на ваш email
-app.config['MAIL_PASSWORD'] = 'your_password'  # Замените на ваш пароль
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
 
 mail = Mail(app)
+csrf = CSRFProtect(app)
 
-@app.route("/")
+class ContactForm(FlaskForm):
+    name = StringField('Name', [validators.DataRequired(), validators.Length(min=1, max=50)])
+    email = EmailField('Email', [validators.DataRequired(), validators.Email()])
+    phone = StringField('Phone', [validators.DataRequired(), validators.Length(min=10, max=15)])
+
+@app.route("/", methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
-
-@app.route('/template/<template_name>')
-def get_template(template_name):
-    try:
-        return render_template(template_name)
-    except Exception as e:
-        return f"Ошибка загрузки шаблона: {e}", 404
-    
-@app.route('/send_mail', methods=['POST'])
-def send_mail():
-    if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        phone = request.form['phone']
+    form = ContactForm()
+    if form.validate_on_submit():
+        name = form.name.data
+        email = form.email.data
+        phone = form.phone.data
 
         msg = Message('Сообщение с сайта', 
-                      sender='your_email@example.com', 
-                      recipients=['recipient@example.com'])  # Замените на email получателя
+                      sender=app.config['MAIL_USERNAME'], 
+                      recipients=['nano.gleb@yandex.ru'])  # email получателя
         msg.body = f"""
         Имя: {name}
         Email: {email}
@@ -45,6 +49,15 @@ def send_mail():
             flash(f'Не удалось отправить сообщение. Ошибка: {str(e)}', 'danger')
         
         return redirect('/')
+    
+    return render_template('index.html', form=form)
+
+@app.route('/template/<template_name>')
+def get_template(template_name):
+    try:
+        return render_template(template_name)
+    except Exception as e:
+        return f"Ошибка загрузки шаблона: {e}", 404
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

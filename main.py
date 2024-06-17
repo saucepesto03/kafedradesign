@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, flash
+from flask import Flask, render_template, redirect, flash
 from flask_mail import Mail, Message
 from flask_wtf import FlaskForm, CSRFProtect
 from wtforms import StringField, EmailField, validators
@@ -12,11 +12,12 @@ app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY')  # Использование переменной окружения для секретного ключа
 
 # Настройка Flask-Mail
-app.config['MAIL_SERVER'] = 'smtp.yourmailserver.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_SERVER'] = os.environ.get('MAIL_SERVER')
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
 app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME')
 
 mail = Mail(app)
 csrf = CSRFProtect(app)

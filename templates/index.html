@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кафедра</title>
+    <title>Кафедра дизайна</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="icon" href="#">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com">
@@ -205,6 +205,7 @@
             <input type="text" id="name" name="name" placeholder="имя" required>
             <input type="email" id="email" name="email" placeholder="email" required>
             <input type="tel" id="phone" name="phone" placeholder="телефон" required>
+            {{ form.hidden_tag() }}
             <button type="submit">Отправить</button>
             <p>Если остались вопросы, оставьте заявку - мы перезвоним</p>
             </form>

@@ -71,18 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // плавный скрол
-    // document.querySelectorAll('nav a').forEach(anchor => {
-    //     anchor.addEventListener('click', function (e) {
-    //         e.preventDefault();
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-    //         const targetId = this.getAttribute('href').substring(1);
-    //         const targetElement = document.getElementById(targetId);
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
 
-    //         targetElement.scrollIntoView({
-    //             behavior: 'smooth'
-    //         });
-    //     });
-    // });
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
 // галерея
 document.addEventListener('DOMContentLoaded', function() {

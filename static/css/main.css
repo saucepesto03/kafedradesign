@@ -282,6 +282,10 @@ h3::after {
     input[type="radio"]:not(:checked) + label::after {
     transition: none;
     }
+    .block2 button {
+        background-color: transparent;
+        border: 1px solid transparent
+    }
 
 
 /* страница 3 преподаватели */
